@@ -30,7 +30,7 @@ else
 Console.WriteLine("Максимальное число равно ");
 Console.Write(max);
 
-
+// Или вариант ниже!
 
 
 //Console.WriteLine("Поиск максимального числа.");
