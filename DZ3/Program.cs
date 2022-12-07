@@ -37,27 +37,4 @@ else
    
    
    
-    // else if (numberA < 100)
-    // {
-    //     Console.Write("Третьей цифры нет!");
-    // }
-    //  else
-    // {
-    //     int numberA = numberA % 10;
-    // Console.Write(numberA);
-    // }
-// Console.Write(numberA);
-
-
-
-// if(numberA < 999  &  numberA > 99)
-// {
-//    int first = numberA / 10;
-//    int second = first % 10;
-// Console.Write(second);
-// }
-
-// else 
-// {
-//    Console.Write("Число не трехзначное! ");
-// }
+  
