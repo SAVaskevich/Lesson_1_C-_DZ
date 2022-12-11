@@ -5,7 +5,8 @@
 
 
 
-
+Console.WriteLine("Введите размер массива!");
+Console.WriteLine("_______________________");
 int n = Convert.ToInt32( Console.ReadLine());
 int[] array = new int[n];
 void PrintArray()
@@ -23,7 +24,7 @@ for (int i = 0; i < n; i++)
      }
 
 
-
+Console.WriteLine("_______________________");
 PrintArray();
 
 
