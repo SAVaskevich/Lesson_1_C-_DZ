@@ -23,22 +23,3 @@ for (int i = 0; i < array.Length; i++)
 Console.WriteLine();          
 Console.Write("Количество четных чисел: ");
 Console.WriteLine(result);
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // Console.WriteLine();
-            // Console.WriteLine();
-            // Console.Write("Индексы: ");
-            // for (int i = 0; i < array.Length; i++)
-            // {
-            //     Console.Write("{0} ", i + 1);
-            // }
-            // Console.WriteLine();
