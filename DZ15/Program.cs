@@ -9,26 +9,26 @@ double min = 100;
 Random random = new Random();
 Console.Write("Массив: ");
 for (int i = 0; i < array.Length; i++)
+{
+    array[i] = random.Next(0, 100) + random.NextDouble();
+    Console.Write("{0} ", array[i]);
+    if (array[i] > max)
     {
-        array[i] = random.Next(0, 100) + random.NextDouble();               
-        Console.Write("{0} ", array[i]);               
-        if ( array[i] > max)
-        {
-            max = array[i];
-            
-        }  
-        if ( array[i] < min)
-            {
-            min = array[i];
-            }   
+        max = array[i];
+
     }
+    if (array[i] < min)
+    {
+        min = array[i];
+    }
+}
 Console.WriteLine();
 Console.Write("Максимальное число: ");
-Console.Write(max);              
+Console.Write(max);
 Console.WriteLine();
 Console.Write("Минимальное число: ");
-Console.Write(min); 
+Console.Write(min);
 result = max - min;
-Console.WriteLine();          
+Console.WriteLine();
 Console.Write("Разница максимального и минимального числа массива: ");
 Console.WriteLine(result);
