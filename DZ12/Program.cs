@@ -13,31 +13,31 @@ float temp1 = 0;
 int temp2 = 0;
 int[] array = new int[10];
 
-for (int i = 0; i < 10 ; i++)
-{             
+for (int i = 0; i < 10; i++)
+{
     temp2 = temp % 10;
     if (temp2 != 0)
     {
-    array[i] = temp2;
-    temp = temp / 10;
-    size += 1;
+        array[i] = temp2;
+        temp = temp / 10;
+        size += 1;
         if (temp == 0)
         {
             i = 10;
         }
     }
 }
-for (int i = 0; i < size ; i++)
+for (int i = 0; i < size; i++)
+{
+    temp = n / array[i];
+    temp1 = temp % 10;
+
+    if (temp1 != 0)
     {
-        temp = n / array[i];
-        temp1 = temp % 10;
-                
-            if (temp1 != 0)
-               {
-                result = result + array[i];
-               }
-           
+        result = result + array[i];
     }
+
+}
 Console.WriteLine(result);
 
 
