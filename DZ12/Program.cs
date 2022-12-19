@@ -3,41 +3,32 @@
 // 82 -> 2
 // 9012 -> 3
 
-Console.WriteLine("Введите число!");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("_____________");
-int size = 0;
-int result = 0;
-int temp = n;
-float temp1 = 0;
-int temp2 = 0;
-int[] array = new int[10];
+Console.WriteLine( "Введите число!" );
+int n = Convert.ToInt32( Console.ReadLine() );
 
-for (int i = 0; i < 10; i++)
+int ret = Parser( n );
+Console.WriteLine( "Result: " + ret.ToString() );
+
+static int Parser( int input )
 {
-    temp2 = temp % 10;
-    if (temp2 != 0)
+    int count  = input.ToString().Length;
+    int sample = input;
+    int result = 0;
+
+    for ( int i = 0; i < count; i++ )
     {
-        array[i] = temp2;
-        temp = temp / 10;
-        size += 1;
-        if (temp == 0)
-        {
-            i = 10;
+        int element = input % 10;
+        input /= 10;
+        if ( element > 0 )
+        {           
+            if ( ( sample % element ) == 0 )
+            {
+                result += element;
+            }
+        
         }
     }
+    return result;
 }
-for (int i = 0; i < size; i++)
-{
-    temp = n / array[i];
-    temp1 = temp % 10;
-
-    if (temp1 != 0)
-    {
-        result = result + array[i];
-    }
-
-}
-Console.WriteLine(result);
 
 
