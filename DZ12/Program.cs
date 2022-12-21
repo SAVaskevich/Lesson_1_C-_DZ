@@ -15,17 +15,13 @@ static int Parser( int input )
     int sample = input;
     int result = 0;
 
-    for ( int i = 0; i < count; i++ )
-    {
+    for ( int i = 0; i < count; i++ ) {
         int element = input % 10;
         input /= 10;
-        if ( element > 0 )
-        {           
-            if ( ( sample % element ) == 0 )
-            {
+        if ( element > 0 ) {           
+            if ( ( sample % element ) == 0 ) {
                 result += element;
             }
-        
         }
     }
     return result;
