@@ -19,6 +19,7 @@ void FillArray(int[,] array)
 }
 void PrintArray(int[,] array)
 {
+    Console.WriteLine("Созданный массив:");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -28,27 +29,30 @@ void PrintArray(int[,] array)
         Console.WriteLine();
     }
 }
+void SmallestAmountLine(int[,] array)
+{
+    int minSum = 0;
+    int rowNum = -1;
 
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        int rowSum = 0;
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            rowSum += array[i, j];
+        }
+        Console.WriteLine($"Сумма={rowSum}");
+
+        if ((rowSum < minSum) || (rowNum == -1))
+        {
+            minSum = rowSum;
+            rowNum = i;
+        }
+    }
+    Console.WriteLine($"\tIndex строки: {rowNum}\n\tМинимальная сумма: {minSum}");
+}
 int[,] array = new int[4, 4];
-int index = 0;
-int sum = int.MaxValue;
-Console.WriteLine("Созданный массив:");
 FillArray(array);
 PrintArray(array);
+SmallestAmountLine(array);
 
-for (int i = 0; i < array.GetLength(0); i++)
-{
-    int temp = 0;
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        temp += array[i, j];
-    }
-    Console.WriteLine();
-    Console.WriteLine("Сумма=" + sum);
-    if (temp < sum)
-    {
-    sum = temp;
-    index = i;
-    }    
-}
-Console.WriteLine("Результат: " + index);
